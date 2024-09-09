@@ -17,6 +17,8 @@ defmodule UploadExperimentWeb.Router do
   scope "/", UploadExperimentWeb do
     pipe_through :browser
 
+    live "/up", UploadLive, :index
+
     get "/", PageController, :home
   end
 
